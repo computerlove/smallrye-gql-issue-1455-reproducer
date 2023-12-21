@@ -4,8 +4,8 @@ import io.quarkus.runtime.Startup;
 import io.smallrye.graphql.client.GraphQLClient;
 import io.smallrye.graphql.client.dynamic.api.DynamicGraphQLClient;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 import java.time.Duration;
 import java.util.Random;
 import java.util.concurrent.ExecutorService;
@@ -77,7 +77,7 @@ public class EagerAppBean {
             while(true) {
                 try {
                     dynamicClient.executeAsync("""
-                            query q {
+                            query q12345 {
                               operation1
                               operation2
                               operation3
@@ -94,7 +94,7 @@ public class EagerAppBean {
             while(true) {
                 try {
                     dynamicClient.executeAsync("""
-                            query q {
+                            query q135 {
                               operation1
                               operation3
                               operation5
